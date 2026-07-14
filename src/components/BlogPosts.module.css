@@ -1,0 +1,9 @@
+.blogSection { padding: 80px 20px; background-color: var(--color-bg); }
+.title { font-family: var(--font-playfair); font-size: 36px; text-align: center; margin-bottom: 50px; font-weight: 400; }
+.blogGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; }
+.blogCard { cursor: pointer; }
+.blogImg { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; margin-bottom: 20px; transition: opacity 0.3s; }
+.blogCard:hover .blogImg { opacity: 0.85; }
+.blogTitle { font-family: var(--font-playfair); font-size: 22px; margin-bottom: 16px; line-height: 1.4; color: var(--color-text); }
+.readBtn { border-bottom: 1px solid #000; padding-bottom: 2px; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; }
+@media(max-width: 768px) { .blogGrid { grid-template-columns: 1fr; } }

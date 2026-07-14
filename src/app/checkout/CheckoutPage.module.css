@@ -1,0 +1,361 @@
+.checkoutLayout {
+  display: flex;
+  min-height: 100vh;
+  font-family: var(--font-inter);
+}
+
+.formSection {
+  flex: 5.5;
+  padding: 50px 80px 50px 10%;
+  border-right: 1px solid #e1e1e1;
+  background-color: #fff;
+}
+
+.summarySection {
+  flex: 4.5;
+  padding: 50px 10% 50px 60px;
+  background-color: #f5f5f5;
+}
+
+.summarySticky {
+  position: sticky;
+  top: 50px;
+}
+
+/* Header & Breadcrumbs */
+.header {
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-family: var(--font-playfair);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #737373;
+}
+
+.activeBreadcrumb {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.fieldset {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.subtext {
+  font-size: 13px;
+  color: #737373;
+  margin-top: -10px;
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.row .input {
+  flex: 1;
+}
+
+/* Payment Methods */
+.paymentMethods {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.radioLabel {
+  display: block;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.radioLabel:last-child {
+  border-bottom: none;
+}
+
+.activeRadio {
+  background-color: #f4f8fb;
+}
+
+.radioHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cardIcons {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.cardIcons img {
+  height: 20px;
+}
+
+.cardForm {
+  padding: 0 16px 16px;
+  background-color: #f4f8fb;
+}
+
+.codMessage {
+  padding: 0 16px 16px;
+  font-size: 14px;
+  color: #555;
+  background-color: #f4f8fb;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.returnLink {
+  font-size: 14px;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Footer Links */
+.footerLinks {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e1e1;
+  display: flex;
+  gap: 20px;
+}
+
+.footerLinks a {
+  font-size: 12px;
+  color: #1990c6;
+  text-decoration: none;
+}
+
+/* Summary Section */
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.itemImageWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemImageWrapper img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 4px;
+}
+
+.itemQty {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: rgba(114, 114, 114, 0.9);
+  color: #fff;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.itemVariant {
+  font-size: 12px;
+  color: #737373;
+}
+
+.itemPrice {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.discountCode {
+  display: flex;
+  gap: 12px;
+  padding: 24px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 24px;
+}
+
+.discountCode .input {
+  margin-bottom: 0;
+}
+
+.applyBtn {
+  background-color: #c8c8c8;
+  color: #fff;
+  border: none;
+  padding: 0 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 24px;
+}
+
+.totalsRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.finalTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.currency {
+  font-size: 12px;
+  color: #737373;
+  font-weight: 400;
+  margin-right: 4px;
+}
+
+/* Success Screen */
+.successScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.successIcon {
+  width: 80px;
+  height: 80px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.successScreen h1 {
+  font-family: var(--font-playfair);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.successScreen p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+  .checkoutLayout {
+    flex-direction: column-reverse;
+  }
+  .formSection {
+    padding: 40px 20px;
+    border-right: none;
+  }
+  .summarySection {
+    padding: 40px 20px;
+  }
+}
