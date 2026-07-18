@@ -86,10 +86,32 @@
 }
 
 @media (max-width: 1024px) {
-  .feedGrid { grid-template-columns: repeat(3, 1fr); }
+  .feedGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-left: 0;
+  }
+  
+  .feedGrid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .postCard {
+    flex: 0 0 75%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
 }
 
 @media (max-width: 600px) {
-  .feedGrid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .postCard { border-radius: 8px; }
+  .feedGrid { gap: 12px; }
+  .postCard { 
+    flex: 0 0 100%;
+    border-radius: 8px; 
+  }
 }

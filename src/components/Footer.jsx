@@ -8,14 +8,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.newsletterSection}>
-        <h2 className={styles.newsletterTitle}>Subscribe To Our Newsletter</h2>
-        <div className={styles.subscribeBox}>
-          <input type="email" placeholder="Your email address" className={styles.emailInput} />
-          <button className={styles.subscribeBtn}>SUBSCRIBE &rarr;</button>
-        </div>
-      </div>
-      
+
       <div className={styles.mainFooter}>
         <div className={styles.brandColumn}>
           <h2 className={styles.logo}>Libaz</h2>

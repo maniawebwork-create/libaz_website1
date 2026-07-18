@@ -1,8 +1,38 @@
-.testimonials { padding: 80px 20px; background: #fff; text-align: center; }
+.testimonials { padding: 80px 20px; background: #fff; text-align: center; overflow: hidden; }
 .title { font-family: var(--font-playfair); font-size: 32px; margin-bottom: 40px; font-weight: 400; }
-.reviewGrid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 1300px; margin: 0 auto; }
-.reviewCard { background: #f9f9f9; padding: 24px; border-radius: 8px; width: 300px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: left; }
+.reviewGrid { 
+  display: flex; 
+  gap: 20px; 
+  max-width: 1300px; 
+  margin: 0 auto; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: none; 
+  scroll-padding-left: 0;
+  scroll-behavior: smooth;
+}
+.reviewGrid::-webkit-scrollbar { display: none; }
+.reviewCard { 
+  background: #f9f9f9; 
+  padding: 24px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+  text-align: left; 
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 .cardHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .stars { color: #f5b301; font-size: 20px; }
 .text { font-size: 14px; color: #555; margin-bottom: 16px; font-style: italic; line-height: 1.6; }
 .name { font-size: 14px; font-weight: 600; color: #000; }
+
+@media (max-width: 1024px) {
+  .reviewCard { flex: 0 0 75%; }
+}
+
+@media (max-width: 600px) {
+  .reviewGrid { gap: 12px; }
+  .reviewCard { flex: 0 0 100%; }
+}

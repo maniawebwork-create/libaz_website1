@@ -1,3 +1,5 @@
+"use client";
+import { useRef, useEffect } from 'react';
 import styles from './Testimonials.module.css';
 
 const reviews = [
@@ -12,10 +14,29 @@ const reviews = [
 ];
 
 export default function Testimonials() {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (gridRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = gridRef.current;
+        if (scrollLeft + clientWidth >= scrollWidth - 5) {
+          gridRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          const firstChild = gridRef.current.children[0];
+          const cardWidth = firstChild ? firstChild.offsetWidth + 20 : 320;
+          gridRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        }
+      }
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className={styles.testimonials}>
       <h2 className={styles.title}>Google Reviews</h2>
-      <div className={styles.reviewGrid}>
+      <div className={styles.reviewGrid} ref={gridRef}>
         {reviews.map((review, i) => (
           <div key={i} className={styles.reviewCard}>
             <div className={styles.cardHeader}>

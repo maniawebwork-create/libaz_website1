@@ -132,8 +132,35 @@
 }
 
 @media (max-width: 1024px) {
-  .productGrid { grid-template-columns: repeat(2, 1fr); }
+  .productGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-left: 0;
+  }
+  
+  .productGrid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .productGrid > a {
+    flex: 0 0 75%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  
+  .navBtn {
+    display: none;
+  }
 }
+
 @media (max-width: 600px) {
-  .productGrid { grid-template-columns: 1fr; }
+  .productGrid { gap: 12px; }
+  .productGrid > a { 
+    flex: 0 0 100%;
+  }
 }
