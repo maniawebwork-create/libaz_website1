@@ -8,7 +8,7 @@ export default function SettingsPage() {
   const [settings, setSettings] = useState({
     hero_title: 'The Art of Karigari',
     hero_subtitle: 'Discover Chandni Chowk’s most exquisite luxury bridal collection, handcrafted for the modern royalty.',
-    contact_phone: '+91 98765 43210',
+    contact_phone: '+91 89202 73313',
     contact_email: 'hello@libazbymann.com'
   });
 

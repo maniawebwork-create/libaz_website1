@@ -19,7 +19,7 @@ export default function Footer() {
           <div className={styles.contactInfo}>
             <p>📍 Shop No. 123, Chandni Chowk, Delhi</p>
             <p>✉️ hello@libazbymann.com</p>
-            <p>📞 +91 98765 43210</p>
+            <p>📞 +91 89202 73313</p>
           </div>
         </div>
         
